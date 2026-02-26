@@ -1,0 +1,10 @@
+<nav class="site-nav">
+  <div class="container">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <ul class="nav-links">
+      {% for link in site.data.navigation %}
+        <li><a href="{{ link.url | relative_url }}"{% if page.url == link.url %} class="active"{% endif %}>{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

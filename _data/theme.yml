@@ -1,0 +1,91 @@
+# ============================================================
+# Theme Configuration — Gruvbox Dark
+# Pure gruvbox palette. Edit one file to re-theme the whole site.
+# https://github.com/morhetz/gruvbox
+# ============================================================
+
+# --- Backgrounds (dark to light) ------------------------------
+colors:
+  bg: "#282828"                # Page background (bg0)
+  bg_subtle: "#32302f"         # Alternate sections (bg0_s)
+  bg_muted: "#3c3836"          # Tags, code, chips (bg1)
+  border: "#504945"            # Borders, dividers (bg2)
+
+# --- Text (light to dark) ------------------------------------
+  text_bright: "#fbf1c7"       # Headings on dark sections (fg0)
+  text: "#ebdbb2"              # Primary body text (fg1)
+  text_secondary: "#d5c4a1"    # Descriptions, secondary (fg2)
+  text_soft: "#bdae93"         # Code blocks, subtle (fg3)
+  text_light: "#a89984"        # Muted, tertiary (fg4)
+
+# --- Accent ---------------------------------------------------
+  accent: "#d79921"            # Links, buttons, borders (yellow)
+  accent_hover: "#fabd2f"      # Hover state (bright yellow)
+
+# --- Dark sections (nav, hero) --------------------------------
+dark:
+  bg: "#1d2021"                # Nav & hero background (bg0_h)
+  border: "#504945"            # Borders in dark areas (bg2)
+  overlay_faint: "rgba(235, 219, 178, 0.03)"
+  overlay_subtle: "rgba(235, 219, 178, 0.06)"
+  overlay_light: "rgba(235, 219, 178, 0.08)"
+  overlay_medium: "rgba(235, 219, 178, 0.12)"
+
+# --- Selection ------------------------------------------------
+selection:
+  bg: "rgba(215, 153, 33, 0.25)"
+
+# --- Accent line (solid, no gradient) -------------------------
+gradients:
+  start: "#d79921"             # All the same = solid accent line
+  mid: "#d79921"
+  end: "#d79921"
+
+# --- Hero -----------------------------------------------------
+hero:
+  glow_primary: "rgba(213, 196, 161, 0.06)"     # Very subtle warm glow
+  glow_secondary: "rgba(213, 196, 161, 0.04)"   # Even subtler
+  label_color: "#fe8019"                         # "Data Engineer" (bright orange)
+  name_color: "#fbf1c7"                          # Name (fg0)
+  stat_color: "#fabd2f"                          # Stat numbers (bright yellow)
+  primary_link_border: "#665c54"                 # Primary link (bg3)
+
+# --- Hover / interaction tints --------------------------------
+interactions:
+  accent_tint: "rgba(215, 153, 33, 0.08)"
+  accent_tint_strong: "rgba(215, 153, 33, 0.12)"
+  accent_border: "rgba(215, 153, 33, 0.3)"
+  accent_glow_sm: "0 0 8px rgba(215, 153, 33, 0.08)"
+  accent_glow_md: "0 0 12px rgba(215, 153, 33, 0.1)"
+  contact_primary_bg: "rgba(215, 153, 33, 0.04)"
+
+# --- Category colours (one per category) ----------------------
+categories:
+  streaming: "#fb4934"         # Bright red
+  batch: "#fe8019"             # Bright orange
+  lakehouse: "#b8bb26"         # Bright green
+  quality: "#d3869b"           # Bright purple
+  devops: "#83a598"            # Bright blue
+
+category_glows:
+  streaming: "0 0 15px rgba(251, 73, 52, 0.1)"
+  batch: "0 0 15px rgba(254, 128, 25, 0.1)"
+  lakehouse: "0 0 15px rgba(184, 187, 38, 0.1)"
+  quality: "0 0 15px rgba(211, 134, 155, 0.1)"
+  devops: "0 0 15px rgba(131, 165, 152, 0.1)"
+
+# --- Layout ---------------------------------------------------
+layout:
+  radius: "6px"                # Slightly less rounded = more terminal-like
+
+# --- Shadows --------------------------------------------------
+shadows:
+  sm: "0 1px 2px rgba(0, 0, 0, 0.2)"
+  md: "0 2px 8px rgba(0, 0, 0, 0.2)"
+  lg: "0 4px 16px rgba(0, 0, 0, 0.25)"
+  glow: "0 0 12px rgba(215, 153, 33, 0.1)"
+
+# --- Transitions ----------------------------------------------
+transitions:
+  default: "0.15s ease"
+  slow: "0.3s ease"

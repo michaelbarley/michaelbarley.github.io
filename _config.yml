@@ -1,0 +1,51 @@
+title: Michael Barley
+description: Data engineer portfolio and blog
+url: "https://michaelbarley.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+author:
+  name: Michael Barley
+  email: michaelrbarley@proton.me
+  uri: https://michaelbarley.github.io
+
+social:
+  name: Michael Barley
+  links:
+    - https://github.com/michaelbarley
+    - https://linkedin.com/in/michaelrbarley
+
+logo: /assets/favicon.svg
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile.lock
+  - README.md
+  - vendor

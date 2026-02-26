@@ -1,0 +1,82 @@
+{% comment %}
+  Generates CSS custom properties from _data/theme.yml.
+  Included in <head> before the main stylesheet.
+{% endcomment %}
+<style>
+:root {
+  /* Colors */
+  --text: {{ site.data.theme.colors.text }};
+  --text-secondary: {{ site.data.theme.colors.text_secondary }};
+  --text-light: {{ site.data.theme.colors.text_light }};
+  --text-bright: {{ site.data.theme.colors.text_bright }};
+  --text-soft: {{ site.data.theme.colors.text_soft }};
+  --accent: {{ site.data.theme.colors.accent }};
+  --accent-hover: {{ site.data.theme.colors.accent_hover }};
+  --border: {{ site.data.theme.colors.border }};
+  --bg: {{ site.data.theme.colors.bg }};
+  --bg-subtle: {{ site.data.theme.colors.bg_subtle }};
+  --bg-muted: {{ site.data.theme.colors.bg_muted }};
+
+  /* Dark sections */
+  --dark-bg: {{ site.data.theme.dark.bg }};
+  --dark-border: {{ site.data.theme.dark.border }};
+  --dark-overlay-faint: {{ site.data.theme.dark.overlay_faint }};
+  --dark-overlay-subtle: {{ site.data.theme.dark.overlay_subtle }};
+  --dark-overlay-light: {{ site.data.theme.dark.overlay_light }};
+  --dark-overlay-medium: {{ site.data.theme.dark.overlay_medium }};
+
+  /* Selection */
+  --selection-bg: {{ site.data.theme.selection.bg }};
+
+  /* Layout */
+  --radius: {{ site.data.theme.layout.radius }};
+
+  /* Shadows */
+  --shadow-sm: {{ site.data.theme.shadows.sm }};
+  --shadow-md: {{ site.data.theme.shadows.md }};
+  --shadow-lg: {{ site.data.theme.shadows.lg }};
+  --shadow-glow: {{ site.data.theme.shadows.glow }};
+
+  /* Transitions */
+  --transition: {{ site.data.theme.transitions.default }};
+  --transition-slow: {{ site.data.theme.transitions.slow }};
+
+  /* Gradients */
+  --gradient-start: {{ site.data.theme.gradients.start }};
+  --gradient-mid: {{ site.data.theme.gradients.mid }};
+  --gradient-end: {{ site.data.theme.gradients.end }};
+  --gradient-accent: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+  --gradient-accent-horizontal: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+
+  /* Hero effects */
+  --hero-bg-deep: {{ site.data.theme.dark.bg }};
+  --hero-glow-primary: {{ site.data.theme.hero.glow_primary }};
+  --hero-glow-secondary: {{ site.data.theme.hero.glow_secondary }};
+  --hero-label-color: {{ site.data.theme.hero.label_color }};
+  --hero-name-color: {{ site.data.theme.hero.name_color }};
+  --hero-stat-color: {{ site.data.theme.hero.stat_color }};
+  --hero-primary-link-border: {{ site.data.theme.hero.primary_link_border }};
+
+  /* Accent interaction states */
+  --accent-tint: {{ site.data.theme.interactions.accent_tint }};
+  --accent-tint-strong: {{ site.data.theme.interactions.accent_tint_strong }};
+  --accent-border: {{ site.data.theme.interactions.accent_border }};
+  --accent-glow-sm: {{ site.data.theme.interactions.accent_glow_sm }};
+  --accent-glow-md: {{ site.data.theme.interactions.accent_glow_md }};
+  --contact-primary-bg: {{ site.data.theme.interactions.contact_primary_bg }};
+
+  /* Category colors */
+  --cat-streaming: {{ site.data.theme.categories.streaming }};
+  --cat-batch: {{ site.data.theme.categories.batch }};
+  --cat-lakehouse: {{ site.data.theme.categories.lakehouse }};
+  --cat-quality: {{ site.data.theme.categories.quality }};
+  --cat-devops: {{ site.data.theme.categories.devops }};
+
+  /* Category hover glows */
+  --cat-streaming-glow: {{ site.data.theme.category_glows.streaming }};
+  --cat-batch-glow: {{ site.data.theme.category_glows.batch }};
+  --cat-lakehouse-glow: {{ site.data.theme.category_glows.lakehouse }};
+  --cat-quality-glow: {{ site.data.theme.category_glows.quality }};
+  --cat-devops-glow: {{ site.data.theme.category_glows.devops }};
+}
+</style>

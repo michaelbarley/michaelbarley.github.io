@@ -1,0 +1,120 @@
+---
+layout: default
+title: About Me
+description: "Michael Barley, data engineer from Darlington. Open source advocate, Linux user, Neovim and tmux enthusiast, retro gamer, chess player, and son of a farming family."
+page_hero: true
+page_hero_subtitle: "Data engineer from Darlington. Open source advocate, Linux user, and terminal dweller."
+---
+
+<div class="about-profile">
+  <img src="{{ '/assets/img/profile.png' | relative_url }}" alt="Michael Barley" class="about-photo">
+  <div class="about-profile-body">
+    <p>I'm Michael, a data engineer from Darlington in the north-east of England. I come from a farming family (yes, that's where the surname comes from), which probably explains why I ended up in a job that's mostly about getting things to grow reliably in unpredictable conditions. Just with data pipelines instead of barley fields.</p>
+    <p>I've spent my career so far building the infrastructure that moves data from where it lands to where it's useful. I like the work because it sits at the intersection of software engineering and problem-solving at scale, and because when you get it right, everything downstream just works.</p>
+  </div>
+</div>
+
+<div class="about-facts-row">
+  <div class="about-fact-chip">
+    <span class="about-fact-label">Location</span>
+    <span class="about-fact-value">Darlington, England</span>
+  </div>
+  <div class="about-fact-chip">
+    <span class="about-fact-label">Role</span>
+    <span class="about-fact-value">Data Engineer at Salesfire</span>
+  </div>
+  <div class="about-fact-chip">
+    <span class="about-fact-label">Education</span>
+    <span class="about-fact-value">BSc Computing, Teesside (First Class)</span>
+  </div>
+  <div class="about-fact-chip">
+    <span class="about-fact-label">Links</span>
+    <span class="about-fact-value"><a href="https://github.com/michaelbarley" target="_blank" rel="noopener">GitHub</a> · <a href="https://linkedin.com/in/michaelrbarley" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:michaelrbarley@proton.me" target="_blank" rel="noopener">Email</a></span>
+  </div>
+</div>
+
+<div class="about-section">
+  <h2>What I Do</h2>
+  <p>At Salesfire, I engineer the data infrastructure behind an ecommerce personalisation platform: real-time pipelines ingesting billions of behavioural events across 700+ retailers, a ClickHouse data warehouse powering analytics, and an identity resolution system built on Neptune ML that stitches anonymous shoppers into unified profiles. Day to day that means SQL, TypeScript, and a lot of AWS and Terraform, with Python for data analysis.</p>
+  <p>Before this I worked across ecommerce, fintech, and ad-tech, starting as a software engineer building Python scrapers and product feed platforms. I gravitated toward data problems early: high-volume ingestion, messy source systems, the gap between raw data and something a business can actually use. I eventually made the switch to data engineering full time.</p>
+</div>
+
+<div class="about-section">
+  <h2>How I Think About Engineering</h2>
+  <div class="about-values-grid">
+    <div class="value-card">
+      <strong>Graceful failure</strong>
+      <p>Every pipeline breaks eventually. I build for idempotency, at-least-once delivery, and clear failure modes so that re-running is always safe and the blast radius is small.</p>
+    </div>
+    <div class="value-card">
+      <strong>Observability over hope</strong>
+      <p>If a pipeline runs without metrics, quality checks, and alerting, you don't know if it's working. You just know it hasn't visibly broken yet. I instrument everything.</p>
+    </div>
+    <div class="value-card">
+      <strong>Infrastructure as code</strong>
+      <p>If it's not in a Terraform file or a Docker image, it doesn't exist. Manual setup is a liability. Reproducibility is a feature.</p>
+    </div>
+    <div class="value-card">
+      <strong>Right tool, right job</strong>
+      <p>Postgres for transactional work, ClickHouse for analytical queries, Kafka for event streaming. I pick tools based on the workload, not the hype cycle.</p>
+    </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <h2>My Setup</h2>
+  <div class="about-interests-grid">
+    <div class="interest-card">
+      <span class="interest-label">OS</span>
+      <p>Linux is my daily driver at home. I love open source and like understanding what's running under the hood, but I'm comfortable working in whatever environment the team uses.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Editor</span>
+      <p>Neovim is my go-to. I enjoy tinkering with the config and the speed of staying in the terminal. That said, I'll happily pair in VS Code or whatever the team prefers.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Workflow</span>
+      <p>tmux and keyboard-driven workflows are what I reach for personally. What matters more to me is that the team has a setup that works well for everyone.</p>
+    </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <h2>Away From the Keyboard</h2>
+  <div class="about-interests-grid">
+    <div class="interest-card">
+      <span class="interest-label">Chess</span>
+      <p>I play regularly, mostly rapid and blitz online. I like that it rewards the same kind of thinking I use at work: pattern recognition, thinking a few moves ahead, and knowing when to trade complexity for a cleaner position.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Cooking</span>
+      <p>I cook most nights and genuinely enjoy it. I lean toward big, slow dishes: stews, curries, anything that rewards patience. There's something satisfying about a process that takes hours but only needs occasional attention.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Rugby</span>
+      <p>I follow rugby union and try to catch as many matches as I can. Growing up in the north-east, it's hard not to end up with a soft spot for the sport. It's part of the fabric up here.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Dungeons &amp; Dragons</span>
+      <p>I play in a regular campaign with friends. It's collaborative storytelling with just enough structure to keep things interesting. Also the only context where my spreadsheet habits are considered a personality trait rather than a problem.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Retro Games</span>
+      <p>I have a real soft spot for retro games. There's something about the constraints of older hardware that forced genuinely creative design. Plus, nothing clears your head after a day of debugging pipelines like a few rounds of something from the 90s.</p>
+    </div>
+    <div class="interest-card">
+      <span class="interest-label">Stargazing</span>
+      <p>Growing up on a farm with no light pollution will do that to you. I still get out when the skies are clear. There's a particular kind of quiet you only get when you're standing in a field at midnight looking up.</p>
+    </div>
+  </div>
+</div>
+
+<div class="about-contact">
+  <h2>Get in Touch</h2>
+  <p>I'm always happy to talk about data engineering, pipeline architecture, or interesting problems.</p>
+  <div class="about-contact-links">
+    <a href="mailto:michaelrbarley@proton.me" class="contact-link contact-link--primary" target="_blank" rel="noopener">Email me</a>
+    <a href="https://linkedin.com/in/michaelrbarley" class="contact-link" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/michaelbarley" class="contact-link" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div>

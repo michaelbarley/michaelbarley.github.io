@@ -1,0 +1,99 @@
+---
+layout: default
+title: Projects
+description: "Data engineering portfolio projects: Kafka pipelines, ClickHouse warehouses, Spark lakehouses, and more, each built from scratch with full documentation."
+page_hero: true
+page_hero_subtitle: "Data engineering portfolio projects, each built from scratch with full documentation."
+---
+
+{% assign sorted = site.projects | sort: "order" %}
+{% assign all_tags = "" | split: "" %}
+{% for project in sorted %}
+  {% for tech in project.stack %}
+    {% assign all_tags = all_tags | push: tech %}
+  {% endfor %}
+{% endfor %}
+{% assign unique_tags = all_tags | uniq | sort %}
+
+<div class="filter-bar">
+  <button class="filter-tag active" data-filter="all">All</button>
+  {% for tag in unique_tags %}
+    <button class="filter-tag" data-filter="{{ tag }}">{{ tag }}</button>
+  {% endfor %}
+</div>
+
+<!-- Category-grouped view (shown when "All" is active) -->
+<div id="category-view">
+  {% assign categories = sorted | map: "category" | uniq %}
+  {% for cat in categories %}
+    <div class="category-group">
+      <h2>{{ cat }}</h2>
+      <div class="project-grid">
+        {% for project in sorted %}
+          {% if project.category == cat %}
+            <div class="project-card" data-tags="{{ project.stack | join: ',' }}" data-category="{{ project.category | slugify }}">
+              <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+              <p>{{ project.description }}</p>
+              <ul class="tech-stack">
+                {% for tech in project.stack %}
+                  <li>{{ tech }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<!-- Flat grid view (shown when a filter is active) -->
+<div class="project-grid" id="filter-view" style="display:none;">
+  {% for project in sorted %}
+    <div class="project-card" data-tags="{{ project.stack | join: ',' }}" data-category="{{ project.category | slugify }}">
+      <span class="project-card-category">{{ project.category }}</span>
+      <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+      <p>{{ project.description }}</p>
+      <ul class="tech-stack">
+        {% for tech in project.stack %}
+          <li>{{ tech }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.filter-tag');
+  var categoryView = document.getElementById('category-view');
+  var filterView = document.getElementById('filter-view');
+  var filterCards = filterView.querySelectorAll('.project-card');
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var filter = btn.getAttribute('data-filter');
+      if (filter === 'all') {
+        categoryView.style.display = '';
+        filterView.style.display = 'none';
+      } else {
+        categoryView.style.display = 'none';
+        filterView.style.display = '';
+        filterCards.forEach(function (card) {
+          var tags = card.getAttribute('data-tags').split(',');
+          var match = tags.indexOf(filter) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) {
+            card.style.animation = 'none';
+            card.offsetHeight;
+            card.style.animation = '';
+          }
+        });
+      }
+    });
+  });
+})();
+</script>

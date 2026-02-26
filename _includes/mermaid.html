@@ -1,0 +1,58 @@
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'base',
+    themeVariables: {
+      darkMode: true,
+      background: '#282828',
+      primaryColor: '#3c3836',
+      primaryTextColor: '#ebdbb2',
+      primaryBorderColor: '#504945',
+      secondaryColor: '#504945',
+      secondaryTextColor: '#ebdbb2',
+      secondaryBorderColor: '#665c54',
+      tertiaryColor: '#32302f',
+      tertiaryTextColor: '#ebdbb2',
+      tertiaryBorderColor: '#504945',
+      lineColor: '#a89984',
+      textColor: '#ebdbb2',
+      mainBkg: '#3c3836',
+      nodeBorder: '#504945',
+      clusterBkg: '#32302f',
+      clusterBorder: '#504945',
+      titleColor: '#ebdbb2',
+      edgeLabelBackground: '#282828',
+      nodeTextColor: '#ebdbb2',
+
+      /* Sequence diagram */
+      actorBkg: '#3c3836',
+      actorBorder: '#504945',
+      actorTextColor: '#ebdbb2',
+      actorLineColor: '#a89984',
+      signalColor: '#ebdbb2',
+      signalTextColor: '#ebdbb2',
+      sequenceNumberColor: '#282828',
+      labelBoxBkgColor: '#3c3836',
+      labelBoxBorderColor: '#504945',
+      labelTextColor: '#ebdbb2',
+      loopTextColor: '#ebdbb2',
+      activationBorderColor: '#504945',
+      activationBkgColor: '#3c3836',
+
+      /* Notes */
+      noteBkgColor: '#504945',
+      noteTextColor: '#ebdbb2',
+      noteBorderColor: '#665c54',
+    }
+  });
+
+  document.querySelectorAll('pre code.language-mermaid').forEach(function (el) {
+    var container = document.createElement('div');
+    container.className = 'mermaid';
+    container.textContent = el.textContent;
+    el.closest('pre').replaceWith(container);
+  });
+
+  mermaid.run();
+</script>

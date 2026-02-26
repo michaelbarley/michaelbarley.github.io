@@ -1,0 +1,146 @@
+---
+layout: home
+title: null
+description: "Data engineer portfolio. Real-time pipelines, data lakehouses, and scalable infrastructure processing billions of events. Python, SQL, Kafka, Spark, and AWS."
+---
+<section class="hero-banner">
+  <div class="hero-glow hero-glow--1"></div>
+  <div class="hero-glow hero-glow--2"></div>
+  <div class="container">
+    <p class="hero-label">Data Engineer</p>
+    <h1><span class="hero-name">Michael Barley</span></h1>
+    <p class="hero-tagline">I build real-time pipelines, data lakehouses, and scalable infrastructure that processes billions of events. Python, SQL, Kafka, Spark, and a lot of AWS.</p>
+    <ul class="hero-links">
+      <li><a href="https://github.com/michaelbarley" class="hero-link--primary" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/michaelrbarley" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:michaelrbarley@proton.me" target="_blank" rel="noopener">Email</a></li>
+      <li><a href="{{ '/cv/' | relative_url }}">CV</a></li>
+      <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="home-stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">700+</span>
+        <span class="stat-label">Retailers Served</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">Billions</span>
+        <span class="stat-label">Events Processed</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">{{ site.projects.size }}</span>
+        <span class="stat-label">Portfolio Projects</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="home-section home-section--projects">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <a href="{{ '/projects/' | relative_url }}" class="section-link">View all &rarr;</a>
+    </div>
+    <div class="project-grid">
+      {% assign sorted = site.projects | sort: "order" %}
+      {% for project in sorted limit:4 %}
+        <div class="project-card" data-category="{{ project.category | slugify }}">
+          <span class="project-card-category">{{ project.category }}</span>
+          <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+          <p>{{ project.description }}</p>
+          <ul class="tech-stack">
+            {% for tech in project.stack %}
+              <li>{{ tech }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<section class="home-section home-section--tools">
+  <div class="container">
+    <h2>What I Work With</h2>
+    <div class="tools-grid">
+      <div class="tool-group">
+        <h3>Languages</h3>
+        <ul class="tool-list">
+          <li>Python</li>
+          <li>SQL</li>
+          <li>TypeScript</li>
+        </ul>
+      </div>
+      <div class="tool-group">
+        <h3>Streaming</h3>
+        <ul class="tool-list">
+          <li>Kafka</li>
+          <li>Debezium</li>
+          <li>ClickHouse</li>
+        </ul>
+      </div>
+      <div class="tool-group">
+        <h3>Data</h3>
+        <ul class="tool-list">
+          <li>Spark</li>
+          <li>Delta Lake</li>
+          <li>dbt</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </div>
+      <div class="tool-group">
+        <h3>Infrastructure</h3>
+        <ul class="tool-list">
+          <li>AWS</li>
+          <li>Terraform</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+        </ul>
+      </div>
+      <div class="tool-group">
+        <h3>Orchestration</h3>
+        <ul class="tool-list">
+          <li>Airflow</li>
+          <li>GitHub Actions</li>
+        </ul>
+      </div>
+      <div class="tool-group">
+        <h3>Observability</h3>
+        <ul class="tool-list">
+          <li>Prometheus</li>
+          <li>Grafana</li>
+          <li>Great Expectations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  {% if site.posts.size > 0 %}
+  <section class="home-section home-section--writing">
+    <div class="section-header">
+      <h2>Latest Writing</h2>
+      <a href="{{ '/blog/' | relative_url }}" class="section-link">All posts &rarr;</a>
+    </div>
+    <div class="writing-list">
+      {% for post in site.posts limit:3 %}
+        <a class="writing-card" href="{{ post.url | relative_url }}">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+          <h3>{{ post.title }}</h3>
+          {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+          <span class="writing-card-arrow">&rarr;</span>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>

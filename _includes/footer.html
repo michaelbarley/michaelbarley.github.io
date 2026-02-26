@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-name">{{ site.title }}</span>
+        <span class="footer-tagline">Data Engineer</span>
+      </div>
+      <nav class="footer-nav">
+        <div class="footer-nav-group">
+          <span class="footer-nav-label">Site</span>
+          <a href="{{ '/projects/' | relative_url }}">Projects</a>
+          <a href="{{ '/blog/' | relative_url }}">Blog</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a href="{{ '/cv/' | relative_url }}">CV</a>
+        </div>
+        <div class="footer-nav-group">
+          <span class="footer-nav-label">Connect</span>
+          <a href="https://github.com/michaelbarley" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/michaelrbarley" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:michaelrbarley@proton.me" target="_blank" rel="noopener">Email</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    </div>
+  </div>
+</footer>

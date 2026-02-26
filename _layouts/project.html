@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="project-detail">
+  <a href="{{ '/projects/' | relative_url }}" class="post-back">&larr; Back to projects</a>
+  <h1>{{ page.title }}</h1>
+  <div class="project-meta">
+    <span class="project-category">{{ page.category }}</span>
+    {% if page.github %}
+      <a href="{{ page.github }}" class="project-link" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+    {% endif %}
+  </div>
+  <ul class="tech-stack">
+    {% for tech in page.stack %}
+      <li>{{ tech }}</li>
+    {% endfor %}
+  </ul>
+  <div class="project-body">
+    {{ content }}
+  </div>
+</article>

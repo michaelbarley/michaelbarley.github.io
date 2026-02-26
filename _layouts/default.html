@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+  {% include nav.html %}
+  {% if page.page_hero %}
+  <section class="page-hero">
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+    <div class="container">
+      {% if page.page_hero_label %}<p class="page-hero-label">{{ page.page_hero_label }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.page_hero_subtitle %}<p class="page-hero-subtitle">{{ page.page_hero_subtitle }}</p>{% endif %}
+    </div>
+  </section>
+  {% endif %}
+  <main id="main-content" class="container{% if page.page_hero %} has-page-hero{% endif %}">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  {% if page.mermaid %}
+    {% include mermaid.html %}
+  {% endif %}
+</body>
+</html>
