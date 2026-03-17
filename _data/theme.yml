@@ -37,11 +37,11 @@ dark:
 selection:
   bg: "rgba(175, 58, 3, 0.25)"
 
-# --- Gradient (Telescope tri-color: orange → aqua → blue) -----
+# --- Accent line (solid faded orange) --------------------------
 gradients:
-  start: "#af3a03"             # Telescope prompt (faded orange)
-  mid: "#427b58"               # Telescope results (faded aqua)
-  end: "#076678"               # Telescope preview (faded blue)
+  start: "#af3a03"             # Solid accent (faded orange)
+  mid: "#af3a03"
+  end: "#af3a03"
 
 # --- Hero -----------------------------------------------------
 hero:
