@@ -758,9 +758,9 @@ main.container {
 }
 
 .filter-tag.active {
-  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
-  border-color: transparent;
-  color: var(--text-bright);
+  background: var(--bg-muted);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* Mermaid diagrams */
