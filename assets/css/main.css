@@ -64,7 +64,7 @@ body {
     Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: var(--text);
   background: var(--bg);
-  line-height: 1.7;
+  line-height: 1.5;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -93,7 +93,7 @@ h2 { font-size: 1.35rem; }
 h3 { font-size: 1.1rem; }
 
 p, ul, ol {
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
 
 ul, ol {
@@ -102,7 +102,7 @@ ul, ol {
 
 /* Layout */
 .container {
-  max-width: 880px;
+  max-width: 740px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -341,7 +341,7 @@ main.container {
 .hero-banner .hero-tagline {
   font-size: 1.15rem;
   color: var(--text-light);
-  line-height: 1.75;
+  line-height: 1.5;
   max-width: 600px;
   margin-bottom: 1.5rem;
   animation: fadeInUp 0.5s ease 0.2s both;
@@ -682,7 +682,7 @@ main.container {
 .project-card p {
   color: var(--text-secondary);
   font-size: 0.875rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 0.75em;
 }
 
@@ -809,7 +809,7 @@ main.container {
 
 .project-detail p {
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.5;
 }
 
 .project-detail strong {
@@ -941,7 +941,7 @@ main.container {
 .writing-card p {
   color: var(--text-secondary);
   font-size: 0.88rem;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
@@ -976,7 +976,7 @@ main.container {
 .blog-header p {
   color: var(--text-secondary);
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.5;
   max-width: 560px;
   margin-bottom: 0;
 }
@@ -1077,7 +1077,7 @@ main.container {
 .blog-card-link p {
   color: var(--text-secondary);
   font-size: 0.93rem;
-  line-height: 1.7;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
@@ -1158,7 +1158,7 @@ main.container {
 .page-hero-subtitle {
   color: var(--text-light);
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.5;
   max-width: 600px;
   margin-bottom: 0;
   animation: fadeInUp 0.5s ease 0.1s both;
@@ -1216,7 +1216,7 @@ main.container.has-page-hero {
 
 .post-body > p:first-child {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.55;
   color: var(--text-secondary);
 }
 
@@ -1228,7 +1228,7 @@ main.container.has-page-hero {
 
 .post p {
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.55;
 }
 
 .post code {
@@ -1246,7 +1246,7 @@ main.container.has-page-hero {
   overflow-x: auto;
   margin: 1.5em 0;
   font-size: 0.85rem;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .post pre code {
@@ -1257,7 +1257,7 @@ main.container.has-page-hero {
 
 .post ul, .post ol {
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.55;
 }
 
 .post li {
@@ -1305,7 +1305,7 @@ main.container.has-page-hero {
 
 .about-profile-body p {
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.55;
 }
 
 /* Facts row: horizontal chips */
@@ -1405,7 +1405,7 @@ main.container.has-page-hero {
 
 .about-section p {
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.55;
 }
 
 /* Values 2x2 grid */
@@ -1456,7 +1456,7 @@ main.container.has-page-hero {
 .value-card p {
   color: var(--text-secondary);
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
@@ -1507,7 +1507,7 @@ main.container.has-page-hero {
 .interest-card p {
   color: var(--text-secondary);
   font-size: 0.88rem;
-  line-height: 1.7;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
@@ -1552,7 +1552,7 @@ main.container.has-page-hero {
 
 .about-contact p {
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.55;
   margin-bottom: 0;
 }
 
@@ -1637,7 +1637,7 @@ main.container.has-page-hero {
 
 .cv-section > p {
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.5;
 }
 
 .cv-entry {
@@ -1662,7 +1662,7 @@ main.container.has-page-hero {
 .cv-entry ul {
   padding-left: 1.2em;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .cv-entry ul li {
@@ -1825,7 +1825,7 @@ main.container.has-page-hero {
   overflow-x: auto;
   margin: 1.5em 0;
   font-size: 0.85rem;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .project-body pre code {

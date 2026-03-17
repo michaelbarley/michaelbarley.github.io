@@ -1,89 +1,91 @@
 # ============================================================
-# Theme Configuration — Gruvbox Dark
-# Pure gruvbox palette. Edit one file to re-theme the whole site.
+# Theme Configuration — Gruvbox Light (hard contrast)
+# Matches Neovim gruvbox.nvim with background=light, contrast=hard
+# Accent: faded orange (Telescope prompt / bufferline indicator)
+# Gradient: Telescope tri-color (orange → aqua → blue)
 # https://github.com/morhetz/gruvbox
 # ============================================================
 
-# --- Backgrounds (dark to light) ------------------------------
+# --- Backgrounds (light to dark) ------------------------------
 colors:
-  bg: "#282828"                # Page background (bg0)
-  bg_subtle: "#32302f"         # Alternate sections (bg0_s)
-  bg_muted: "#3c3836"          # Tags, code, chips (bg1)
-  border: "#504945"            # Borders, dividers (bg2)
+  bg: "#f9f5d7"                # Page background (bg0_h — hard contrast)
+  bg_subtle: "#fbf1c7"         # Alternate sections / selected tab bg (bg0)
+  bg_muted: "#f2e5bc"          # Tags, code, chips (bg0_s)
+  border: "#d5c4a1"            # Borders, dividers, inactive tab bg (bg2)
 
-# --- Text (light to dark) ------------------------------------
-  text_bright: "#fbf1c7"       # Headings on dark sections (fg0)
-  text: "#ebdbb2"              # Primary body text (fg1)
-  text_secondary: "#d5c4a1"    # Descriptions, secondary (fg2)
-  text_soft: "#bdae93"         # Code blocks, subtle (fg3)
-  text_light: "#a89984"        # Muted, tertiary (fg4)
+# --- Text (dark to light) ------------------------------------
+  text_bright: "#282828"       # Headings on accent sections (fg0)
+  text: "#3c3836"              # Primary body text / selected tab fg (fg1)
+  text_secondary: "#504945"    # Descriptions, secondary (fg2)
+  text_soft: "#665c54"         # Code blocks, subtle (fg3)
+  text_light: "#928374"        # Muted, tertiary — bufferline inactive fg (gray)
 
-# --- Accent ---------------------------------------------------
-  accent: "#d79921"            # Links, buttons, borders (yellow)
-  accent_hover: "#fabd2f"      # Hover state (bright yellow)
+# --- Accent (faded orange — matches Telescope prompt) ---------
+  accent: "#af3a03"            # Links, buttons, borders (faded orange)
+  accent_hover: "#d65d0e"      # Hover state (bright orange)
 
-# --- Dark sections (nav, hero) --------------------------------
+# --- Dark sections (nav, hero, footer — bufferline fill) ------
 dark:
-  bg: "#1d2021"                # Nav & hero background (bg0_h)
-  border: "#504945"            # Borders in dark areas (bg2)
-  overlay_faint: "rgba(235, 219, 178, 0.03)"
-  overlay_subtle: "rgba(235, 219, 178, 0.06)"
-  overlay_light: "rgba(235, 219, 178, 0.08)"
-  overlay_medium: "rgba(235, 219, 178, 0.12)"
+  bg: "#ebdbb2"                # Nav & hero background (bg1 — bufferline fill)
+  border: "#bdae93"            # Borders in dark areas (bg3)
+  overlay_faint: "rgba(60, 56, 54, 0.03)"
+  overlay_subtle: "rgba(60, 56, 54, 0.06)"
+  overlay_light: "rgba(60, 56, 54, 0.08)"
+  overlay_medium: "rgba(60, 56, 54, 0.12)"
 
 # --- Selection ------------------------------------------------
 selection:
-  bg: "rgba(215, 153, 33, 0.25)"
+  bg: "rgba(175, 58, 3, 0.25)"
 
-# --- Accent line (solid, no gradient) -------------------------
+# --- Gradient (Telescope tri-color: orange → aqua → blue) -----
 gradients:
-  start: "#d79921"             # All the same = solid accent line
-  mid: "#d79921"
-  end: "#d79921"
+  start: "#af3a03"             # Telescope prompt (faded orange)
+  mid: "#427b58"               # Telescope results (faded aqua)
+  end: "#076678"               # Telescope preview (faded blue)
 
 # --- Hero -----------------------------------------------------
 hero:
-  glow_primary: "rgba(213, 196, 161, 0.06)"     # Very subtle warm glow
-  glow_secondary: "rgba(213, 196, 161, 0.04)"   # Even subtler
-  label_color: "#fe8019"                         # "Data Engineer" (bright orange)
-  name_color: "#fbf1c7"                          # Name (fg0)
-  stat_color: "#fabd2f"                          # Stat numbers (bright yellow)
-  primary_link_border: "#665c54"                 # Primary link (bg3)
+  glow_primary: "rgba(175, 58, 3, 0.06)"       # Subtle warm glow
+  glow_secondary: "rgba(7, 102, 120, 0.04)"    # Cool accent glow
+  label_color: "#af3a03"                         # "Data Engineer" (faded orange)
+  name_color: "#282828"                          # Name (fg0)
+  stat_color: "#b57614"                          # Stat numbers (faded yellow)
+  primary_link_border: "#bdae93"                 # Primary link (bg3)
 
-# --- Hover / interaction tints --------------------------------
+# --- Hover / interaction tints (orange-based) -----------------
 interactions:
-  accent_tint: "rgba(215, 153, 33, 0.08)"
-  accent_tint_strong: "rgba(215, 153, 33, 0.12)"
-  accent_border: "rgba(215, 153, 33, 0.3)"
-  accent_glow_sm: "0 0 8px rgba(215, 153, 33, 0.08)"
-  accent_glow_md: "0 0 12px rgba(215, 153, 33, 0.1)"
-  contact_primary_bg: "rgba(215, 153, 33, 0.04)"
+  accent_tint: "rgba(175, 58, 3, 0.08)"
+  accent_tint_strong: "rgba(175, 58, 3, 0.12)"
+  accent_border: "rgba(175, 58, 3, 0.3)"
+  accent_glow_sm: "0 0 8px rgba(175, 58, 3, 0.08)"
+  accent_glow_md: "0 0 12px rgba(175, 58, 3, 0.1)"
+  contact_primary_bg: "rgba(175, 58, 3, 0.04)"
 
-# --- Category colours (one per category) ----------------------
+# --- Category colours (faded variants — match nvim diagnostics) -
 categories:
-  streaming: "#fb4934"         # Bright red
-  batch: "#fe8019"             # Bright orange
-  lakehouse: "#b8bb26"         # Bright green
-  quality: "#d3869b"           # Bright purple
-  devops: "#83a598"            # Bright blue
+  streaming: "#9d0006"         # Faded red (error)
+  batch: "#af3a03"             # Faded orange (main accent)
+  lakehouse: "#79740e"         # Faded green
+  quality: "#8f3f71"           # Faded purple
+  devops: "#076678"            # Faded blue (info)
 
 category_glows:
-  streaming: "0 0 15px rgba(251, 73, 52, 0.1)"
-  batch: "0 0 15px rgba(254, 128, 25, 0.1)"
-  lakehouse: "0 0 15px rgba(184, 187, 38, 0.1)"
-  quality: "0 0 15px rgba(211, 134, 155, 0.1)"
-  devops: "0 0 15px rgba(131, 165, 152, 0.1)"
+  streaming: "0 0 15px rgba(157, 0, 6, 0.1)"
+  batch: "0 0 15px rgba(175, 58, 3, 0.1)"
+  lakehouse: "0 0 15px rgba(121, 116, 14, 0.1)"
+  quality: "0 0 15px rgba(143, 63, 113, 0.1)"
+  devops: "0 0 15px rgba(7, 102, 120, 0.1)"
 
 # --- Layout ---------------------------------------------------
 layout:
   radius: "6px"                # Slightly less rounded = more terminal-like
 
-# --- Shadows --------------------------------------------------
+# --- Shadows (lighter for light theme) ------------------------
 shadows:
-  sm: "0 1px 2px rgba(0, 0, 0, 0.2)"
-  md: "0 2px 8px rgba(0, 0, 0, 0.2)"
-  lg: "0 4px 16px rgba(0, 0, 0, 0.25)"
-  glow: "0 0 12px rgba(215, 153, 33, 0.1)"
+  sm: "0 1px 2px rgba(0, 0, 0, 0.06)"
+  md: "0 2px 8px rgba(0, 0, 0, 0.08)"
+  lg: "0 4px 16px rgba(0, 0, 0, 0.1)"
+  glow: "0 0 12px rgba(175, 58, 3, 0.08)"
 
 # --- Transitions ----------------------------------------------
 transitions:
