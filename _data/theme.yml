@@ -1,93 +1,91 @@
 # ============================================================
-# Theme Configuration — Gruvbox Light (hard contrast)
-# Matches Neovim gruvbox.nvim with background=light, contrast=hard
-# Accent: faded orange (Telescope prompt / bufferline indicator)
-# Gradient: Telescope tri-color (orange → aqua → blue)
-# https://github.com/morhetz/gruvbox
+# Theme Configuration — Apple-inspired
+# Clean whites, subtle grays, blue accent
+# Generous whitespace, large radii, minimal visual noise
 # ============================================================
 
-# --- Backgrounds (light to dark) ------------------------------
+# --- Backgrounds -------------------------------------------
 colors:
-  bg: "#f9f5d7"                # Page background (bg0_h — hard contrast)
-  bg_subtle: "#fbf1c7"         # Alternate sections / selected tab bg (bg0)
-  bg_muted: "#f2e5bc"          # Tags, code, chips (bg0_s)
-  border: "#d5c4a1"            # Borders, dividers, inactive tab bg (bg2)
+  bg: "#ffffff"                  # Page background
+  bg_subtle: "#f5f5f7"          # Alternate sections
+  bg_muted: "#f5f5f7"           # Tags, code, chips
+  border: "#d2d2d7"             # Borders, dividers
 
-# --- Text (dark to light) ------------------------------------
-  text_bright: "#282828"       # Headings on accent sections (fg0)
-  text: "#3c3836"              # Primary body text / selected tab fg (fg1)
-  text_secondary: "#504945"    # Descriptions, secondary (fg2)
-  text_soft: "#665c54"         # Code blocks, subtle (fg3)
-  text_light: "#928374"        # Muted, tertiary — bufferline inactive fg (gray)
+# --- Text (dark to light) ----------------------------------
+  text_bright: "#1d1d1f"        # Headings, strongest emphasis
+  text: "#1d1d1f"               # Primary body text
+  text_secondary: "#424245"     # Descriptions, secondary
+  text_soft: "#6e6e73"          # Code blocks, subtle
+  text_light: "#86868b"         # Muted, tertiary
 
-# --- Accent (faded orange — matches Telescope prompt) ---------
-  accent: "#af3a03"            # Links, buttons, borders (faded orange)
-  accent_hover: "#d65d0e"      # Hover state (bright orange)
+# --- Accent (Apple blue) -----------------------------------
+  accent: "#0071e3"             # Links, buttons, borders
+  accent_hover: "#0077ED"       # Hover state
 
-# --- Dark sections (nav, hero, footer — bufferline fill) ------
+# --- Dark sections (nav, hero, footer) ----------------------
 dark:
-  bg: "#ebdbb2"                # Nav & hero background (bg1 — bufferline fill)
-  border: "#bdae93"            # Borders in dark areas (bg3)
-  overlay_faint: "rgba(60, 56, 54, 0.03)"
-  overlay_subtle: "rgba(60, 56, 54, 0.06)"
-  overlay_light: "rgba(60, 56, 54, 0.08)"
-  overlay_medium: "rgba(60, 56, 54, 0.12)"
+  bg: "#fbfbfd"                 # Nav & hero background
+  border: "#d2d2d7"             # Borders in dark areas
+  overlay_faint: "rgba(0, 0, 0, 0.02)"
+  overlay_subtle: "rgba(0, 0, 0, 0.04)"
+  overlay_light: "rgba(0, 0, 0, 0.06)"
+  overlay_medium: "rgba(0, 0, 0, 0.08)"
 
-# --- Selection ------------------------------------------------
+# --- Selection ---------------------------------------------
 selection:
-  bg: "rgba(175, 58, 3, 0.25)"
+  bg: "rgba(0, 113, 227, 0.15)"
 
-# --- Accent line (solid faded orange) --------------------------
+# --- Accent line -------------------------------------------
 gradients:
-  start: "#af3a03"             # Solid accent (faded orange)
-  mid: "#af3a03"
-  end: "#af3a03"
+  start: "#0071e3"
+  mid: "#0071e3"
+  end: "#0071e3"
 
-# --- Hero -----------------------------------------------------
+# --- Hero --------------------------------------------------
 hero:
-  glow_primary: "rgba(175, 58, 3, 0.06)"       # Subtle warm glow
-  glow_secondary: "rgba(7, 102, 120, 0.04)"    # Cool accent glow
-  label_color: "#af3a03"                         # "Data Engineer" (faded orange)
-  name_color: "#282828"                          # Name (fg0)
-  stat_color: "#b57614"                          # Stat numbers (faded yellow)
-  primary_link_border: "#bdae93"                 # Primary link (bg3)
+  glow_primary: "rgba(0, 113, 227, 0.04)"
+  glow_secondary: "rgba(0, 113, 227, 0.02)"
+  label_color: "#0071e3"
+  name_color: "#1d1d1f"
+  stat_color: "#1d1d1f"
+  primary_link_border: "#d2d2d7"
 
-# --- Hover / interaction tints (orange-based) -----------------
+# --- Hover / interaction tints ------------------------------
 interactions:
-  accent_tint: "rgba(175, 58, 3, 0.08)"
-  accent_tint_strong: "rgba(175, 58, 3, 0.12)"
-  accent_border: "rgba(175, 58, 3, 0.3)"
-  accent_glow_sm: "0 0 8px rgba(175, 58, 3, 0.08)"
-  accent_glow_md: "0 0 12px rgba(175, 58, 3, 0.1)"
-  contact_primary_bg: "rgba(175, 58, 3, 0.04)"
+  accent_tint: "rgba(0, 113, 227, 0.06)"
+  accent_tint_strong: "rgba(0, 113, 227, 0.10)"
+  accent_border: "rgba(0, 113, 227, 0.3)"
+  accent_glow_sm: "0 0 0 transparent"
+  accent_glow_md: "0 0 0 transparent"
+  contact_primary_bg: "rgba(0, 113, 227, 0.04)"
 
-# --- Category colours (faded variants — match nvim diagnostics) -
+# --- Category colours ---------------------------------------
 categories:
-  streaming: "#9d0006"         # Faded red (error)
-  batch: "#af3a03"             # Faded orange (main accent)
-  lakehouse: "#79740e"         # Faded green
-  quality: "#8f3f71"           # Faded purple
-  devops: "#076678"            # Faded blue (info)
+  streaming: "#FF3B30"           # Red
+  batch: "#FF9500"               # Orange
+  lakehouse: "#34C759"           # Green
+  quality: "#AF52DE"             # Purple
+  devops: "#007AFF"              # Blue
 
 category_glows:
-  streaming: "0 0 15px rgba(157, 0, 6, 0.1)"
-  batch: "0 0 15px rgba(175, 58, 3, 0.1)"
-  lakehouse: "0 0 15px rgba(121, 116, 14, 0.1)"
-  quality: "0 0 15px rgba(143, 63, 113, 0.1)"
-  devops: "0 0 15px rgba(7, 102, 120, 0.1)"
+  streaming: "0 2px 8px rgba(255, 59, 48, 0.10)"
+  batch: "0 2px 8px rgba(255, 149, 0, 0.10)"
+  lakehouse: "0 2px 8px rgba(52, 199, 89, 0.10)"
+  quality: "0 2px 8px rgba(175, 82, 222, 0.10)"
+  devops: "0 2px 8px rgba(0, 122, 255, 0.10)"
 
-# --- Layout ---------------------------------------------------
+# --- Layout ------------------------------------------------
 layout:
-  radius: "6px"                # Slightly less rounded = more terminal-like
+  radius: "12px"
 
-# --- Shadows (lighter for light theme) ------------------------
+# --- Shadows -----------------------------------------------
 shadows:
-  sm: "0 1px 2px rgba(0, 0, 0, 0.06)"
-  md: "0 2px 8px rgba(0, 0, 0, 0.08)"
-  lg: "0 4px 16px rgba(0, 0, 0, 0.1)"
-  glow: "0 0 12px rgba(175, 58, 3, 0.08)"
+  sm: "0 1px 3px rgba(0, 0, 0, 0.04)"
+  md: "0 4px 12px rgba(0, 0, 0, 0.06)"
+  lg: "0 8px 24px rgba(0, 0, 0, 0.08)"
+  glow: "0 4px 12px rgba(0, 0, 0, 0.06)"
 
-# --- Transitions ----------------------------------------------
+# --- Transitions -------------------------------------------
 transitions:
-  default: "0.15s ease"
-  slow: "0.3s ease"
+  default: "0.2s ease"
+  slow: "0.3s cubic-bezier(0.25, 0.1, 0.25, 1)"
