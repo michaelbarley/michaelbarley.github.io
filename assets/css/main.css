@@ -141,27 +141,42 @@ main.container {
 .terminal-header {
   background: var(--bg-muted);
   border-bottom: 1px solid var(--border);
-  padding: 0.5rem 0.75rem;
+  padding: 0.35rem 0.75rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: space-between;
 }
-
-.terminal-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-}
-.terminal-dot--red { background: #ff5555; }
-.terminal-dot--yellow { background: #f1fa8c; }
-.terminal-dot--green { background: #50fa7b; }
 
 .terminal-title {
-  color: var(--text-soft);
+  color: var(--text-secondary);
   font-size: 0.75rem;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.terminal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius);
+  color: var(--text-soft);
+  font-size: 0.7rem;
+  line-height: 1;
+  transition: all var(--transition);
+  cursor: default;
+}
+.terminal-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+.terminal-btn--close:hover {
+  background: #ff5555;
+  color: #fff;
 }
 
 .terminal-body {
