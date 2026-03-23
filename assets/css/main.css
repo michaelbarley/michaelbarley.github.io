@@ -1517,3 +1517,76 @@ main.container.has-page-hero {
 
   h1 { font-size: 1.5rem; }
 }
+
+/* ========== Print (CV PDF) ========== */
+@media print {
+  /* Hide non-content elements */
+  .site-nav,
+  .site-footer,
+  .scanlines,
+  .skip-to-content,
+  .cv-download,
+  .page-hero { display: none !important; }
+
+  /* Reset to white background, black text */
+  html, body {
+    background: #fff !important;
+    color: #1a1a1a !important;
+    font-size: 10pt;
+    line-height: 1.35;
+    -webkit-print-color-adjust: exact;
+  }
+
+  * {
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  main.container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: auto !important;
+    max-width: 100% !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  a { text-decoration: underline !important; }
+
+  /* Override scroll-reveal (IntersectionObserver doesn't fire in print) */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* CV specific overrides */
+  .cv-header {
+    border-bottom: 1px solid #ccc !important;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .cv-header h1 { font-size: 1.6rem; }
+
+  .cv-section {
+    margin-bottom: 1.5rem;
+  }
+  .cv-section h2 {
+    color: #1a1a1a !important;
+    border-bottom: 1px solid #ccc !important;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .cv-entry { margin-bottom: 1rem; break-inside: avoid; }
+  .cv-entry h3 { font-size: 0.95rem; }
+  .cv-entry ul { margin-bottom: 0.25em; }
+  .cv-entry ul li { margin-bottom: 0.15em; }
+
+  .cv-skills strong { color: #1a1a1a !important; }
+  .cv-contact a { color: #1a1a1a !important; }
+}
