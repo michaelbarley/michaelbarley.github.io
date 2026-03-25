@@ -1,89 +1,89 @@
 # ============================================================
-# Theme Configuration — Linux Terminal
-# Dark backgrounds, phosphor green accent, monospace aesthetic
-# Terminal-inspired UI with CRT effects and green glow
+# Theme Configuration — Apple-inspired
+# Clean whites, subtle grays, blue accent
+# Generous whitespace, large radii, minimal visual noise
 # ============================================================
 
 # --- Backgrounds -------------------------------------------
 colors:
-  bg: "#0d1117"                  # Deep dark (terminal background)
-  bg_subtle: "#161b22"          # Slightly lighter (card backgrounds)
-  bg_muted: "#1c2333"           # Tags, code blocks, chips
-  border: "#30363d"             # Borders, dividers
+  bg: "#ffffff"                  # Page background
+  bg_subtle: "#f5f5f7"          # Alternate sections
+  bg_muted: "#f5f5f7"           # Tags, code, chips
+  border: "#d2d2d7"             # Borders, dividers
 
-# --- Text (light to dim on dark) --------------------------
-  text_bright: "#e6edf3"        # Headings, strongest emphasis
-  text: "#c9d1d9"               # Primary body text
-  text_secondary: "#8b949e"     # Descriptions, secondary
-  text_soft: "#6e7681"          # Muted, subtle
-  text_light: "#484f58"         # Dimmest, tertiary
+# --- Text (dark to light) ----------------------------------
+  text_bright: "#1d1d1f"        # Headings, strongest emphasis
+  text: "#1d1d1f"               # Primary body text
+  text_secondary: "#424245"     # Descriptions, secondary
+  text_soft: "#6e6e73"          # Code blocks, subtle
+  text_light: "#86868b"         # Muted, tertiary
 
-# --- Accent (terminal green) ------------------------------
-  accent: "#50fa7b"             # Links, buttons, prompts
-  accent_hover: "#69ff97"       # Hover state (brighter green)
+# --- Accent (Apple blue) -----------------------------------
+  accent: "#0071e3"             # Links, buttons, borders
+  accent_hover: "#0077ED"       # Hover state
 
 # --- Dark sections (nav, hero, footer) ----------------------
 dark:
-  bg: "#0d1117"                 # Same as main bg
-  border: "#30363d"             # Consistent border
-  overlay_faint: "rgba(80, 250, 123, 0.02)"
-  overlay_subtle: "rgba(80, 250, 123, 0.04)"
-  overlay_light: "rgba(80, 250, 123, 0.06)"
-  overlay_medium: "rgba(80, 250, 123, 0.08)"
+  bg: "#fbfbfd"                 # Nav & hero background
+  border: "#d2d2d7"             # Borders in dark areas
+  overlay_faint: "rgba(0, 0, 0, 0.02)"
+  overlay_subtle: "rgba(0, 0, 0, 0.04)"
+  overlay_light: "rgba(0, 0, 0, 0.06)"
+  overlay_medium: "rgba(0, 0, 0, 0.08)"
 
 # --- Selection ---------------------------------------------
 selection:
-  bg: "rgba(80, 250, 123, 0.25)"
+  bg: "rgba(0, 113, 227, 0.15)"
 
 # --- Accent line -------------------------------------------
 gradients:
-  start: "#50fa7b"
-  mid: "#8be9fd"
-  end: "#bd93f9"
+  start: "#0071e3"
+  mid: "#0071e3"
+  end: "#0071e3"
 
 # --- Hero --------------------------------------------------
 hero:
-  glow_primary: "rgba(80, 250, 123, 0.08)"
-  glow_secondary: "rgba(80, 250, 123, 0.04)"
-  label_color: "#50fa7b"
-  name_color: "#e6edf3"
-  stat_color: "#50fa7b"
-  primary_link_border: "#30363d"
+  glow_primary: "rgba(0, 113, 227, 0.04)"
+  glow_secondary: "rgba(0, 113, 227, 0.02)"
+  label_color: "#0071e3"
+  name_color: "#1d1d1f"
+  stat_color: "#1d1d1f"
+  primary_link_border: "#d2d2d7"
 
 # --- Hover / interaction tints ------------------------------
 interactions:
-  accent_tint: "rgba(80, 250, 123, 0.08)"
-  accent_tint_strong: "rgba(80, 250, 123, 0.15)"
-  accent_border: "rgba(80, 250, 123, 0.4)"
-  accent_glow_sm: "0 0 8px rgba(80, 250, 123, 0.3)"
-  accent_glow_md: "0 0 16px rgba(80, 250, 123, 0.2)"
-  contact_primary_bg: "rgba(80, 250, 123, 0.08)"
+  accent_tint: "rgba(0, 113, 227, 0.06)"
+  accent_tint_strong: "rgba(0, 113, 227, 0.10)"
+  accent_border: "rgba(0, 113, 227, 0.3)"
+  accent_glow_sm: "0 0 0 transparent"
+  accent_glow_md: "0 0 0 transparent"
+  contact_primary_bg: "rgba(0, 113, 227, 0.04)"
 
-# --- Category colours (Dracula palette) --------------------
+# --- Category colours ---------------------------------------
 categories:
-  streaming: "#ff5555"           # Red
-  batch: "#ffb86c"               # Orange
-  lakehouse: "#50fa7b"           # Green
-  quality: "#bd93f9"             # Purple
-  devops: "#8be9fd"              # Cyan
+  streaming: "#FF3B30"           # Red
+  batch: "#FF9500"               # Orange
+  lakehouse: "#34C759"           # Green
+  quality: "#AF52DE"             # Purple
+  devops: "#007AFF"              # Blue
 
 category_glows:
-  streaming: "0 2px 12px rgba(255, 85, 85, 0.25)"
-  batch: "0 2px 12px rgba(255, 184, 108, 0.25)"
-  lakehouse: "0 2px 12px rgba(80, 250, 123, 0.25)"
-  quality: "0 2px 12px rgba(189, 147, 249, 0.25)"
-  devops: "0 2px 12px rgba(139, 233, 253, 0.25)"
+  streaming: "0 2px 8px rgba(255, 59, 48, 0.10)"
+  batch: "0 2px 8px rgba(255, 149, 0, 0.10)"
+  lakehouse: "0 2px 8px rgba(52, 199, 89, 0.10)"
+  quality: "0 2px 8px rgba(175, 82, 222, 0.10)"
+  devops: "0 2px 8px rgba(0, 122, 255, 0.10)"
 
 # --- Layout ------------------------------------------------
 layout:
-  radius: "4px"
+  radius: "12px"
 
-# --- Shadows (dark + green glow) ---------------------------
+# --- Shadows -----------------------------------------------
 shadows:
-  sm: "0 1px 4px rgba(0, 0, 0, 0.4)"
-  md: "0 4px 12px rgba(0, 0, 0, 0.5)"
-  lg: "0 8px 24px rgba(0, 0, 0, 0.6)"
-  glow: "0 0 12px rgba(80, 250, 123, 0.15)"
+  sm: "0 1px 3px rgba(0, 0, 0, 0.04)"
+  md: "0 4px 12px rgba(0, 0, 0, 0.06)"
+  lg: "0 8px 24px rgba(0, 0, 0, 0.08)"
+  glow: "0 4px 12px rgba(0, 0, 0, 0.06)"
 
 # --- Transitions -------------------------------------------
 transitions:
